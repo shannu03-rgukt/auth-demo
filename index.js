@@ -58,7 +58,7 @@ app.get("/profile", (req, res) => {
   jwt.verify(token, SECRET_KEY, (err, decoded) => {
     if (err) return res.status(401).json({ message: "Unauthorized" });
 
-    res.json({ message: Welcome ${decoded.username} });
+    res.json({ message: Welcome `${decoded.username}` });
   });
 });
 
